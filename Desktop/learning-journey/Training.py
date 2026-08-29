@@ -1,17 +1,27 @@
-''' # Train Example 2 for list
-import random
+''' # Function for finding prime numbers in a given range
+def judge(n) -> bool:
+    for x in range(2, int((n ** 0.5) // 1) + 1):
+        if n % x == 0:
+            return False
+    return True
 
-n = int(input("Set of numbers: "))
 
-for x in range (n):
-    red = [i for i in range(1, 34)]
-    blue = [random.randrange(1,17)]
-    B = random.choice(blue)
-    R = list(random.sample(red, 6))
-    R.sort
-    [print(f"\033[31m{x:0>2d}", end = " ") for x in R]
-    print(f"\033[34m{B:0>2d}")
-    print()
+for i in range(2, 100):
+    if judge(i):
+        print(i)
 '''
 
-printYeahhh
+
+def judge(a, b, c) -> bool:
+    if a + b > c and b + c > a and a + c > b:
+        return True
+
+def calc_P(a, b, c):
+    P = a + b + c
+
+
+a, b, c = (input("The lengths for a triangle: "))
+if judge(a, b, c) == True:
+    print(f"The perimeter of the triangle is {judge(a, b, c)}")
+else:
+    print("a + b > c and b + c > a and a + c > b, hence please give a new input data set")
